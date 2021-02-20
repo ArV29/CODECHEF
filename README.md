@@ -3,7 +3,7 @@ This Repository contains the codes, questions as well as the logics(for those pe
 
 There is a seperate folder for each assignment which further contain the codes and questions.
 
-The logic.txt file in each folder contains my logics(someone may have better logics than me outh there, but mine work) for all the questions in the folder
+The logic.txt file in each folder contains my logics(someone may have better logics than me out there) for all the questions in the folder
 
 
 

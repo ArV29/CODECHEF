@@ -1,0 +1,49 @@
+Q : FDGHLM:-
+  In this question we are required to find the hcf and lcm of two number.
+  We start by finding out the greater number out of the two, then making a copy of the two numbers as we want the original numbers at the end and we would be making    
+  changes to the the original variables for calculating the hcf.
+  For calulating the hcf : 
+    we'll be using euclidean division to find the hcf.
+    initailly let "a" be the variable containing the lesser number and "b" the variable containing the greater number
+    loop until b is not diviisble by a:
+      in the loop, store the value of a in a temp variable
+      store the value of the remainder of division of b and a
+      in  b store the value of temp(original value of in the bgining of the iteration)
+     
+    when we exit the loop, the value of a will give the hcf of a and b
+    for calculating the lcm we can use the fact that for two numbers A & B, HCFxLCM = AxB 
+    
+    
+    
+   
+   
+Q: FINDMELI:
+  In this question we have to find if a specific value exists in a given list of value
+  For that we can either loop throught the list or us "in" keyword, both work the same way for the most part, unless u input the list as a set
+  
+ 
+ 
+ 
+ 
+Q: PRCHECK:
+  In this question we have to find whether the given number is prime or not
+  As the first step, we'll check if the given number is one or not, if 1 then the number is a composite number, else we'll move forward
+  If the number was not equal to 1 then we'll run loop from 2 till the square root of the number, and if the number is divisible by any number in the range then
+  it's a composite number, else a prime number
+  
+ 
+ 
+ 
+Q: REVMEE:
+  In this question we will be given a list of number and asked to print it in  reverse order. We can take couple of approaches:
+    Either take an index from the end of the list till the starting and print along
+    or use the builtin python function "reversed()" to reverse the lsit and then print it.
+    
+    
+    
+    
+Q: RNGEODD: 
+  In this qestion we have to print the odd numbers in a given range.
+  First of all we'll check whether the starting number of the range is odd or even , if even add one to it, else do nothing
+  then run a loop staring from the initail value to end, while incrementing 2 and printing along
+  

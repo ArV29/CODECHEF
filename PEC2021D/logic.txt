@@ -1,0 +1,109 @@
+Q: DECREC
+ In this question we are given a secret message which is encryted with a unique key, in which every letter from a->h coressponds to another letter from a->h,
+ exluding itself.
+ 
+ We are also given a list of non-encrypted words, from which the message is formed.
+ The logic I came up was to generate all possible keys which can be formed, 
+ store each key in a dictonary and then store all the keys in a list.
+ 
+ Then I'll start with the first word in the encryped message, decrypt it using a key in the keys array till the time, the decryped word in present in the
+ list of non-ncryped words, if we find such a key then decrypt the next word in the message using the same key, if the word is again present in the list of
+ non-encrypted words, then check for the next word and so on.
+ 
+ If on decyrting word with a key that was able to decrpyt previous words, the decrypted word isn't available in the non-encrypted words list then, start the process
+ of checking the first word of the message with the next key in the list of keys, and continue the cycle till we find a key which is able to decrypt the message 
+ completely.
+ 
+ 
+ Finally using this key, decrypt and print the message.
+ 
+ 
+ 
+ 
+ 
+Q: MAXOVRLP
+
+  In this question we are a given a list of start and end times of a classes(both inclued), and the total number of possible values the end and start time could take
+  My approach was to creat a  dictonary "hallsReq" that would store the number of classes required at a given time, and an array "keys" which store the possible values of times.
+  
+  we start inputting the start and end times and in our "hallsReq" dictonary we increment the value of key -> startTime by 1(as a new hall is req at this point of time)
+  and decrement the value of key->(endTime + 1) (as a hall frees up at the end of a class)
+  we also add the values of startTime and (endTiime +1) to our keys list
+  
+  We sort the "keys" list so that while looping throught the "hallReq" dic we go in ascending order of the time
+  
+  After doing this with all the classes, we take 2 variable "ans" and "sum", and initialize both with zero.
+  
+  we than iterate through the "keys" list and using the keys, find the number of hallsReq at that time.
+  
+  we add the number of halls req at each key to the sum variable and in the ans variable store the max value  of ans and sum(the value of sum could decrease as
+  the value of hallReq may be nagative for a given time, but we have to find the max number of (minimum) classes that may be required at any point of time)
+  
+  At the end. the final value of "ans" gives our answer
+  
+  
+  
+  
+ 
+Q: SETGEN
+  
+   In this question we have to claculate and print the subsets of all natural number of the set of the natutal numbers till a number n
+   
+   we start with a list with a single element "[]"
+   
+   Then we start a loop from 1 till n.(using iterator i)
+   
+    In this loop we  start another loop from 0 till the number of elemets( in the list before i ( 2^(i-1))
+    
+        in this loop we append the value of i to all the previous sets in the subsets list and print the last element of the subsets list(the element we just added)
+        as we go on
+   
+   
+   Doing this we we'll get out desired output
+   
+   
+   
+   
+
+Q: SIMCROSS:
+
+    In this question we are given a crossword with indications as to how words would be filled in it.
+    we are also given a list of words which may fit in the crossword, if have to find the words fit into the crossword or not.
+    The important point is that every word is of differnt length(this makes things quite a bit easy)
+    
+    We start iterating over each cell of the loop and if we encounter any "B" or "R" then find the size of black space horizontally 
+    and check if the word with length equal to space of te the blank space, fits into the space or not
+    (check if putting the word on the blank interferes with any previously filled words).
+    
+    If the word fits then put it into the space and start iterating over the crossboard from the point we left off.
+    
+    If we ecounter a "b" or a "c" then then check for the blank space vertically
+    
+    If at any point a word does not fit, then we can easily print "Invalid" and stop the further checking
+    
+    If at then end all the words do fit, then print the crossword with the fitted words/
+    
+    
+    
+    TIPs : While inputing the crossword, covert "b", "c", "r" to uppercase, as it will help while checking, as the words are in lowercase.
+    
+         : Keep a copy of the orginal board, which is only checked for finding out which positons are supposed to be filled, and make changes in another copy.
+         
+ 
+ 
+ 
+ Q: SRTCHK
+ 
+    In this question we are given two lists a and b and check if the second list is the sorted version of the first one.
+    
+    we can solve this easily by first sorting the list a, using the sort() function or by other various ways that we have learnt.
+    
+    Then check if the sorted version of a is equal to b.
+    
+    
+   
+  
+   
+   
+
+  

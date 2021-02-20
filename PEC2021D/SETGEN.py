@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     
-    for i in range(t):
+    for x in range(t):
         n = int(input())
         
         subset= [[]]

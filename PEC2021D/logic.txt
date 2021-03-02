@@ -60,10 +60,37 @@ Q: SETGEN
    
    
    Doing this we we'll get out desired output
+
+
+   Another approach that can be used is something quite analogous to the logic used for solving the Rat and Poison puzzle, posed Sanket Sir in initial Unacademy classes. 
+   We can make use of binary numbers to generate the required subset. How? Let me explain with an example. Consider n=3, hence 2^3=8 subsets will be generated.
+   Now observe the following pattern-
+
+       Decimal Number    Binary Representation   
+           0                  000
+           1                  001
+           2                  010
+           3                  011
+           4                  100
+           5                  101
+           6                  110
+           7                  111
    
-   
-   
-   
+   The numbers 0 to 7 (2^3=8 numbers) cover all the possibilities of binary numbers that can be represented with three digits( i.e. three [0 or 1]). Now we want to print the subsets for n=3. To do this,
+   we can consider that if the units place of binary representation has 0/1 it would mean that the number 1 is absent/present in that particular subset, similarly the digit(0/1) at 
+   tens place would correspond to the number 2 being absent/present in that subset, and similarly, hundreds place would correspond to the absence/presence of the number 3.
+   This way all the possible combinations (subsets) can be generated, and that too in the order requested by the assignment problem. To achieve this by code, we'll need to utilise bitwise operators too. 
+   The following table would make the picture clearer.
+       
+       Decimal Number    Binary Representation    Corresponding Subset Generated(each subset is printed with digits in ascending order)
+           0                  000                      (empty set)
+           1                  001                           1
+           2                  010                           2
+           3                  011                           12
+           4                  100                           3
+           5                  101                           13
+           6                  110                           23
+           7                  111                           123
 
 Q: SIMCROSS:
 

@@ -16,16 +16,16 @@ def find_memory_limit():
     while low < high-1:
         mid = (low+high)//2
         if run_program(mid):
-            high = mid
-        else:
             low = mid
+        else:
+            high = mid
 
 
 
-    if run_program(low):
-        return low
-    else:
+    if run_program(high):
         return high
+    else:
+        return low
 
 
 def main():

@@ -1,0 +1,27 @@
+Q1 : QCKSRT!
+
+	Over all we have to find a list for which the given quicksort will always have to make a constant number of comparisions no matter which pivot is choosed.	
+We can approach the problem in three ways:
+	A. :  Analysing the given quick sort implementation, then figuring out when comparisons are made and finally thinking about an array for which the number of comparisons made will always be constant and also the maximum number of comparisons possible.
+	B. :  Taking the given code, modifying it a bit so that everytime the lessthan() function is called, a global variable count is increased by 1, then for multiple arrays check for which type of array constantly makes the maximum number of comparions.
+P.S. this line is a spoiler, it contains the answer to the question. If u are still unable to figure out, the ans is (an array having the same elemetns)
+
+
+Q2: QCKSRT2:
+	In this question we are given a an array and a quick sort implementation, we have to take a look at the array and figure out out of of the indecies, which all if chosen as a pivot would give a stable sort.
+	The logic behind this is that the first occurance of a value could be chosen as a pivot as in choosing that the relatove order of two different numbers can never be changed as the quicksort implementation swaps in such a way that the elements that are less than the pivot are placed to the pivot's left and rest are placed to it's right, so if two elements have the same value, and the first element with that value is picked as a pivot then the secons would be placed on its right, thus maintaing the relative order.
+	
+	Now coming how to find/keep track of the indices, we can use a dictonary with the value of the elments of the array as the keys, which will store the first index corresponding to the element as the value of the dictionary.
+
+Q3: BNSRCH1:
+	The question basically asks as to calculate an upper limit of memeory for which the program runs.
+	To do that we can use a modifaction of binary search in which we can change the value of low/high to mid depending on whether the program runs at the previos mid or not.
+	HINT: If the program works at a mid then make low = mid so that we can check again for a mid greater than the current mid, else if the program does not work we can make high = mid and subsequently check for a lower value of mid.
+
+Q4: BNSRCH2:
+	First using simple binary search we find a position at which the given X is present, then using the approach from the previous question we can find the the upper bound(the max index at which the given x is present, in the subarray [(the index where we found X at first) : len(arr)-1], and modify the logic a bit to find the lower limit(lowest index where x occurs in the subarray [0:(index where we first found x)].
+	Calcualting the difference between the calculated upper and lower bounds and adding one to it(0-based indexing), will give us the desired result.
+
+Q5: SRTPRB3:
+	For this question we can have a dictorany which for key has the values of fractions and for values has the best for of given fraction(use keys (- (10^9+1) for -INFINITY and 10^9+1 for INFINITY as calculating actual infinity will result in divisioByZero error)
+	The sort the keys in ascending order and print the values of the dictonary according to te sorted keys(fraction values)   

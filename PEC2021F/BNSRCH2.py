@@ -1,8 +1,3 @@
-
-
-
-
-
 import sys
  
 def find_pos(x):
@@ -15,59 +10,56 @@ def find_pos(x):
 # You can use the function find_pos(x) to find the value of the element at position x (0 indexed)
 # If the index is invalid or you use more than 40 queries to obtain the value, you will receive Wrong Answer
 # Chef's array size is not more than 10 ** 5
-def upper_bound(low, high, X):
+def upper_bound(l, r, x):
     
-    while low < high-1:
-        middle = (low+high)//2
-        if find_pos(middle)==X:
-            low = middle
+    while l < r-1:
+        mid = (l+r)//2
+        if find_pos(mid)==x:
+            l = mid
         else:
-            high = middle
-    if find_pos(high)==X:
-        return high
+            r = mid
+    if find_pos(r)==x:
+        return r
     else:
-        return low
+        return l
 
-def lower_bound(low, high, X):
-    while low < high-1:
-        middle = (low+high)//2
-        if find_pos(middle)==X:
-            high = middle
+def lower_bound(l, r, x):
+    while l < r-1:
+        mid = (l+r)//2
+        if find_pos(mid)==x:
+            r = mid
         else:
-            low = middle
-    if find_pos(low)==X:
-        return low
+            l = mid
+    if find_pos(l)==x:
+        return l
     else:
-        return high
-def count(n, X):
+        return r
+def count(n, x):
     global cnt
-    low = 0
-    high = n-1
+    l = 0
+    r = n-1
     
-    middle = (low+high)//2
-    val = find_pos(middle)
-    while low<=high:
-        if val == X:
+    mid = (l+r)//2
+    val = find_pos(mid)
+    while l<=r:
+        if val == x:
             break
-        elif val>X:
-            high = middle-1
+        elif val>x:
+            r = mid-1
         else:
-            low = middle+1
-        middle = (low+high)//2
-        val = find_pos(middle)
+            l = mid+1
+        mid = (l+r)//2
+        val = find_pos(mid)
     
-    if val !=X:
-        print("value not found")
-        return 0
+    if val !=x:
+        return 0    
     
-    lowerLimit = lower_bound(low, middle, X)
+    lowerLimit = lower_bound(l, mid, x)
     
 
-    upperLimit = upper_bound(middle, high, X)
+    upperLimit = upper_bound(mid, r, x)
     
     return upperLimit-lowerLimit+1
-
-    
 # ----------------- Do not modify anything below this line -----------------------
  
 n = int(input())

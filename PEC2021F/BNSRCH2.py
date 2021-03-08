@@ -63,6 +63,6 @@ def count(n, x):
 # ----------------- Do not modify anything below this line -----------------------
  
 n = int(input())
-x = int(input())
+X = int(input())
  
-print('2 ' + str(count(n, x)))
+print('2 ' + str(count(n, X)))

@@ -36,3 +36,4 @@ count = 0
 for intersection in intersections:
     if len(intersections[intersection][0]) == 2 and intersections[intersection][1] == 4 and intersections[intersection][2][0] and intersections[intersection][2][1]:
         count+=1
+print(count)

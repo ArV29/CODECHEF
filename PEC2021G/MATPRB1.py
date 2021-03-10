@@ -32,8 +32,9 @@ for t in range(t):
         diagonal.append(matrix[i][i])
         if matrix[i][i] == 0:
             zeroInDiagonal = True
+   
     if upperTriangle or lowerTriangle:
-        if lowerTriangle and lowerTriangle:
+        if lowerTriangle and upperTriangle:
             if not zeroInDiagonal:
                 isDiagonal = 1
             else:

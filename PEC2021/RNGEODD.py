@@ -5,4 +5,4 @@ if x % 2 == 0:
     x += 1
 while x <= y:
     print(x, end=" ")
-x += 2
+    x += 2

@@ -7,5 +7,5 @@ while counter <= number**0.5:
     if number % counter == 0:
         print(0)
         exit()
-counter += 1
+    counter += 1
 print(1)
